@@ -138,4 +138,13 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         instance.fixForSafariMobile(this);
         return this;
     };
+    // Begin Set height
+    //get number of select list items
+    var length = $('#select > option').length;
+    //bind select list to fixForSafariMobile
+    $("#select").fixForSafariMobile();
+    //add height by multiplying the number of select items by 20
+    //so each item adds 20px of height to the select list
+    $("#select_safarimobile").css("height", (length*20) + "px");
+    // End Set height
 }());
